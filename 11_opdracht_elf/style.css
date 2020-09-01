@@ -1,0 +1,75 @@
+html, body {
+    height:100%
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 2px;
+    grid-template: 1fr 6fr 4fr 1fr/ repeat(12,1fr);
+    grid-template-areas: 
+    "h h h h h h h h h h h h "
+    "m m m m m m m m m m m m "
+    "w w w w w w w w w w w w "
+    "f f f f f f f f f f f f "
+  
+}
+
+
+.header {
+    grid-column: 2/-1;
+    background-color: lightskyblue;
+    grid-area: h;
+}
+
+.main {
+    grid-column: 2/-1;
+    background-color: lime;
+    grid-area: m;
+}
+
+.widget {
+    background-color: mediumpurple;
+    grid-area: w;
+}
+
+.footer {
+    background-color: midnightblue;
+    grid-area: f;
+}
+p { 
+    color: white;
+    padding: 5px 8px;
+   
+}
+
+@media (min-width: 1024px) {
+        .container {
+            height: 100%;
+            display: grid;
+            grid-gap: 2px;
+            grid-template: 1fr 6fr 4fr 1fr/ repeat(12,1fr);
+            grid-template-areas: 
+            "h h h h m m m m m m m m"
+            "h h h h m m m m m m m m "
+            "h h h h w w w w w w w w "
+            "h h h h f f f f f f f f "
+          
+        }   
+    }
+
+
+@media (min-width: 1224px) {
+    .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 2px;
+        grid-template: 1fr 6fr 4fr 1fr/ repeat(12,1fr);
+        grid-template-areas: 
+        "h h h m m m m m w w w w "
+        "h h h m m m m m w w w w "
+        "h h h m m m m m w w w w "
+        "h h h f f f f f w w w w "
+      
+    }
+}
